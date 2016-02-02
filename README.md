@@ -3,4 +3,6 @@
 Juicy looks for Juicy Files and dorks for possible new attack options
 
 USAGE = Python [TARGET]
+
+-V (--verbose) = Verbose mode on
 /// JUST STARTED PROJECT///
