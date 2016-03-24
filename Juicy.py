@@ -58,7 +58,7 @@ else:
 			i=i+1
 
 if args.panel & args.verbose:
-	print o + "Finding Admin Panel"
+	print O + "Finding Admin Panel"
 	while i < len(Panel) :
 		attack = urllib.urlopen("http://"+url+"/"+Panel[i])
 		if attack.getcode() == 200:
@@ -68,7 +68,7 @@ if args.panel & args.verbose:
 			print R + "[-]" + W + " http://" + url + "/" + Panel[i]
 			i=i+1
 elif args.panel:
-	print o + "Finding Admin Panel"
+	print O + "Finding Admin Panel"
 	while i < len(Panel) :
 		attack = urllib.urlopen("http://"+url+"/"+Panel[i])
 		if attack.getcode() == 200:
