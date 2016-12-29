@@ -42,48 +42,48 @@ def fix_url(url):
 	if url[:7]  != "http://" and  url[:8]  != "https://"         : url_out = "http://" + url
 	if url[(len(url)-1):] != "/"       : url_out = url_out + "/"
 	return url_out
-	
+
 url=fix_url(args.Target)
 
 if args.juicy:
 	print O + "Finding Juicy Files!"
 	for test_dork in alldorks:
 		if urllib.urlopen(url+test_dork).getcode() == 200:
-			print G + "[+]" + url+test_dork + test_dork
+			print G + "[+]" + url+test_dork
 		else:
-			if args.verbose:print R + "[-]" + url+test_dork + test_dork
+			if args.verbose:print R + "[-]" + url+test_dork
 
 elif args.juicy:
 	print O + "Finding Juicy Files!"
 	for test_dork in alldorks:
 		if urllib.urlopen(url+test_dork).getcode() == 200:
-			print G + "[+]" + url+test_dork + test_dork
+			print G + "[+]" + url+test_dork
 		else:
-			if args.verbose:print R + "[-]" + url+test_dork + test_dork
+			if args.verbose:print R + "[-]" + url+test_dork
 
 
 if args.panel:
 	print O + "Finding Admin Panel!"
 	for test_panel in Panel:
 		if urllib.urlopen(url+test_panel).getcode() == 200:
-			print G + "[+]" + url+test_dork + test_panel
+			print G + "[+]" + url+test_panel
 		else:
-			if args.verbose:print R + "[-]" + url+test_dork + test_panel
+			if args.verbose:print R + "[-]" + url+test_panel 
 
 
 elif args.wordpress:
 	print O + "Finding Wordpress Juicy Files!"
 	for test_wordpress in Panel:
 		if urllib.urlopen(url+test_wordpress).getcode() == 200:
-			print G + "[+]" + url+test_dork + test_wordpress
+			print G + "[+]" + url + test_wordpress
 		else:
-			if args.verbose:print R + "[-]" + url+test_dork + test_wordpress
+			if args.verbose:print R + "[-]" + url+ test_wordpress
 
 
 elif args.joomla:
 	print O + "Finding Joomla Juicy Files!"
 	for test_joomla in Panel:
 		if urllib.urlopen(url+test_joomla).getcode() == 200:
-			print G + "[+]" + url+test_dork + test_joomla
+			print G + "[+]" + url+ test_joomla
 		else:
-			if args.verbose:print R + "[-]" + url+test_dork + test_joomla
+			if args.verbose:print R + "[-]" + url + test_joomla
